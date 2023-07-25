@@ -22,9 +22,7 @@ class AuthRepository extends BaseAuthRepository {
         email: email,
         password: password,
       );
-      if (user != null) {
-        islog = true;
-      }
+      islog = true;
     } on auth.FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         throw Exception('No user found for that email.');

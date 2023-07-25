@@ -43,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(120.0),
                       child: CachedNetworkImage(
                         imageUrl:
-                            'https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?s=1024x1024&w=is&k=20&c=iX0adGZVKv9wS5yrs0-hpFsJBnRAacZa1DcDZ0I9Bqk=',
+                            'https://hips.hearstapps.com/hmg-prod/images/sam-worthington-avatar-the-way-of-the-water-1670323169.jpg?crop=0.528xw:1.00xh;0.134xw,0&resize=1200:*',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -85,7 +85,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 0,
                   ),
                   const Divider(),
                   const SizedBox(
@@ -104,7 +104,7 @@ class ProfileScreen extends StatelessWidget {
                     icon: FontAwesomeIcons.info,
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 0,
                   ),
                   SizedBox(
                     width: 300,

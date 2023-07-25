@@ -26,7 +26,7 @@ class CartDisplayScreen extends StatelessWidget {
               if (state is CartLoaded) {
                 return Container(
                   padding: EdgeInsets.zero,
-                  height: 400,
+                  height: 330,
                   child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: state.cart
