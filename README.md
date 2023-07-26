@@ -1,4 +1,4 @@
-# MyTikTok
+# Online Shop
 By using firebase as a backend, I developed a flutter app for shoping online.
 
 ## State Management
