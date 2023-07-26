@@ -36,10 +36,10 @@ class TopContainer extends StatelessWidget {
                     ),
                   )
                 : Image.asset(
-                    "assets/logo1.jpg",
-                    fit: BoxFit.cover,
-                    width: 170,
-                    height: 65,
+                    "assets/logo1.png",
+                    fit: BoxFit.contain,
+                    width: 120,
+                    height: 45,
                   ),
             const Spacer(),
             Container(

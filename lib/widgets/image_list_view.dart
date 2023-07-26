@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:online_shop/utils/utils.dart';
 
 import '../data.dart';
 
@@ -52,9 +53,9 @@ class _ImageListViewState extends State<ImageListView> {
           controller: _scrollController,
           itemCount: 5,
           itemBuilder: (context, index) {
-            return CachedNetworkImage(
-              imageUrl: products[widget.starIndex + index],
-              imageBuilder: (context, imageProvider) {
+            return Image.asset(
+             assetspics[index],
+              /*imageBuilder: (context, imageProvider) {
                 return Container(
                   margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
                   height: MediaQuery.of(context).size.height * 0.40,
@@ -63,7 +64,7 @@ class _ImageListViewState extends State<ImageListView> {
                       image: DecorationImage(
                           image: imageProvider, fit: BoxFit.cover)),
                 );
-              },
+              },*/
             );
           },
         ),

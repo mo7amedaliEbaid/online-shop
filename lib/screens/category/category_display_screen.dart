@@ -61,9 +61,11 @@ class _CategoryDisplayScreenState extends State<CategoryDisplayScreen> {
                                 Text(
                                   state.categories[index].categoryName,
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 18.0,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                  backgroundColor: Colors.white
+                                  ),
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -71,9 +73,11 @@ class _CategoryDisplayScreenState extends State<CategoryDisplayScreen> {
                                 Text(
                                   "${state.categories[index].productCount} Products",
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 12,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                  backgroundColor: Colors.white
+                                  ),
                                 )
                               ],
                             ),
