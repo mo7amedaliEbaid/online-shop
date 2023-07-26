@@ -5,8 +5,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:online_shop/utils/utils.dart';
 
-import '../data.dart';
-
 class ImageListView extends StatefulWidget {
   final int starIndex;
   ImageListView({super.key, required this.starIndex});

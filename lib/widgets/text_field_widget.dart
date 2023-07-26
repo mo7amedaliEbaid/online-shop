@@ -31,7 +31,7 @@ Widget textFieldWidget({
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 270.0,
+          width: 260.0,
           child: TextField(
             controller: controller,
             textAlignVertical: TextAlignVertical.center,

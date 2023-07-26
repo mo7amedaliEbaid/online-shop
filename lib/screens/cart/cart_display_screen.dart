@@ -12,6 +12,7 @@ class CartDisplayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.sizeOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: Column(
@@ -26,7 +27,7 @@ class CartDisplayScreen extends StatelessWidget {
               if (state is CartLoaded) {
                 return Container(
                   padding: EdgeInsets.zero,
-                  height: 330,
+                  height: size.height*.48,
                   child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: state.cart
@@ -55,7 +56,7 @@ class CartDisplayScreen extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: 20,
+            height: size.height*.05,
           ),
           BlocBuilder<CartBloc, CartState>(builder: (context, state) {
             if (state is CartLoaded) {

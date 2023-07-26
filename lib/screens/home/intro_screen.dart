@@ -35,7 +35,7 @@ class IntroScreen extends StatelessWidget {
                 ],
               )),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.08,
+            top: MediaQuery.of(context).size.height * 0.05,
             child: Container(
               decoration: BoxDecoration(
                   boxShadow: [
@@ -49,7 +49,7 @@ class IntroScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20)),
               child: Image.asset(
                 "assets/logo1.png",
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
                 width: 300,
                 height: 60,
               ),
@@ -82,7 +82,7 @@ class IntroScreen extends StatelessWidget {
                       height: 40,
                     ),
                     Text(
-                      'Change The Quality Of Your \n Appearance with MOROCCO FASHION',
+                      'Change The Quality Of Your \n Appearance with Our FASHION Shop',
                       style: kNormalStyle.copyWith(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
