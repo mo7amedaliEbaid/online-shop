@@ -1,16 +1,54 @@
-# online_shop
+# MyTikTok
+By using firebase as a backend, I developed a flutter app for shoping online.
 
-A new Flutter project.
+## State Management
+✔️ Bloc Pattern <br />
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Features and components
+✔️ Authentication with Email & Password         
+✔️ Authentication with Google Account         
+✔️ Cart           
+✔️ Animations           
+✔️ Categories screen             
+✔️ Product details screen      
+✔️ Intro Screen     
+✔️ Bottom Nav Bar      
+✔️ Products Screen      
+✔️ Profile Screen
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**firebase**
+- firebase_core:
+- firebase_auth:
+- cloud_firestore:
+- google_sign_in:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**state management**
+- bloc:
+- equatable:
+- flutter_bloc:
+
+**common**
+- cached_network_image:
+- flutter_staggered_grid_view:
+- font_awesome_flutter:
+
+
+## Screenshots
+<p float="left">
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro-m.jpg" width="150" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/products-m.jpg" width="150" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/cart-m.jpg" width="150" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/profile-m.jpg" width="150" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/cats-m.jpg" width="150" />
+</p>
+<p float="left">
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro-wide.jpg" width="320" />
+</p>
+<p float="left">
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro1-wide.jpg" width="320" />
+</p>
+
+more screenshots https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots
