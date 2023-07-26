@@ -45,16 +45,16 @@ By using firebase as a backend, I developed a flutter app for shoping online.
 <img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/cats-m.jpg" width="150" />
 </p>
 <p float="left">
-<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro-wide.jpg" width="320" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro-wide.jpg" width="520" />
 </p>
 <p float="left">
-<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro1-wide.jpg" width="320" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots/intro1-wide.jpg" width="520" />
 </p>
 <p float="left">
-<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/acf750d791b0e2444d7cff66e3e2a7788a94ced0/onlineshop_screenshots/firestore1.png" width="350" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/acf750d791b0e2444d7cff66e3e2a7788a94ced0/onlineshop_screenshots/firestore1.png" width="550" />
 </p>
 <p float="left">
-<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/acf750d791b0e2444d7cff66e3e2a7788a94ced0/onlineshop_screenshots/firestore.png" width="350" />
+<img src="https://github.com/mo7amedaliEbaid/online-shop/blob/acf750d791b0e2444d7cff66e3e2a7788a94ced0/onlineshop_screenshots/firestore.png" width="550" />
 </p>
 
 more screenshots https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots
