@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
+String RefCode='';
+String PaymobFirstToken='';
+String OrderId='';
+
+String FinalTokenCard='';
+String FinalTokenKiosk='';
+
+
 const kTitleStyle = TextStyle(
     fontSize: 28,
     fontWeight: FontWeight.bold,

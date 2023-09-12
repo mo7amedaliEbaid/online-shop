@@ -4,7 +4,7 @@ import 'package:online_shop/screens/cart/cart_display_screen.dart';
 
 import 'package:webviewx/webviewx.dart';
 
-import '../../secrets.dart';
+import '../../utils/utils.dart';
 import '../../widgets/components.dart';
 
 
