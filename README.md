@@ -8,6 +8,7 @@ By using firebase as a backend, I developed a flutter app for shoping online.
 
 ## Features and components
 
+✔️ Paymob Integration
 ✔️ Authentication with Email & Password         
 ✔️ Authentication with Google Account         
 ✔️ Cart           
@@ -39,6 +40,8 @@ By using firebase as a backend, I developed a flutter app for shoping online.
 - cached_network_image:
 - flutter_staggered_grid_view:
 - font_awesome_flutter:
+- dio:
+- webviewx:
 
 ## Screenshots
 
