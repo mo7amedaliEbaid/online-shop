@@ -7,6 +7,7 @@ import 'package:online_shop/utils/utils.dart';
 
 class ImageListView extends StatefulWidget {
   final int starIndex;
+
   ImageListView({super.key, required this.starIndex});
 
   @override
@@ -52,7 +53,7 @@ class _ImageListViewState extends State<ImageListView> {
           itemCount: 5,
           itemBuilder: (context, index) {
             return Image.asset(
-             assetspics[index],
+              assetspics[index],
               /*imageBuilder: (context, imageProvider) {
                 return Container(
                   margin: const EdgeInsets.only(top: 10, left: 10, right: 10),

@@ -15,7 +15,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
 
   SignInBloc({required this.authRepository}) : super(SignInState.initial()) {
     on<SignInWithCredentia>(_mapSignInWithCredentialToState);
-    on<GoogleSignIn>(_mapGoogleSignInToState);
+   // on<GoogleSignIn>(_mapGoogleSignInToState);
   }
 
   FutureOr<void> _mapSignInWithCredentialToState(
@@ -38,7 +38,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
     }
   }
 
-  FutureOr<void> _mapGoogleSignInToState(
+/*  FutureOr<void> _mapGoogleSignInToState(
       GoogleSignIn event, Emitter<SignInState> emit) async {
     emit(state.copyWith(status: SignInStatus.submitting));
 
@@ -51,7 +51,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
           status: SignInStatus.error,
           error: CustomError(message: e.toString())));
     }
-  }
+  }*/
 }
 
 

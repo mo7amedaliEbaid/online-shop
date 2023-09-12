@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -36,6 +35,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController userAdress = TextEditingController();
   final TextEditingController userPass = TextEditingController();
   final TextEditingController userZipcode = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

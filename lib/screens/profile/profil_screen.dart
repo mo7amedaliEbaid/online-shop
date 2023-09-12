@@ -183,6 +183,7 @@ class ProfileScreen extends StatelessWidget {
 class ProfileMenuWidget extends StatelessWidget {
   final IconData icon;
   final String title;
+
   const ProfileMenuWidget({
     super.key,
     required this.icon,

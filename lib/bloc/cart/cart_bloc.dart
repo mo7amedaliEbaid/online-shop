@@ -11,7 +11,7 @@ part 'cart_event.dart';
 
 part 'cart_state.dart';
 
-/*class CartBloc extends Bloc<CartEvent, CartState> {
+class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc() : super(CartLoading()) {
     on<CartStarted>((event, emit) {
       emit(CartLoading());
@@ -35,8 +35,8 @@ part 'cart_state.dart';
       }
     });
   }
-}*/
-class CartBloc extends Bloc<CartEvent, CartState> {
+}
+/*class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc() : super(const CartInitialState()) {
     on<AddProductToCartEvent>(_onAddProductToCartEvent);
     //on<RemoveProductFromCartEvent>(_onRemoveProductFromCartEvent);
@@ -44,7 +44,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     //on<FetchCartProductsEvent>(_onFetchCartProductsEvent);
   }
 
-  /* void _onFetchCartProductsEvent(FetchCartProductsEvent event, Emitter<CartState> emitter) {
+   void _onFetchCartProductsEvent(FetchCartProductsEvent event, Emitter<CartState> emitter) {
     // Change the state to LoadingState
     List<CartItem> cartItems = demoCart.products;
     if(cartItems.length >= 0){
@@ -52,7 +52,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     }else{
       emitter( const CartErrorFetchDataState(errorMessage: "Something went wrong please try again!"));
     }
-  }*/
+  }
 
   void _onAddProductToCartEvent(
       AddProductToCartEvent event, Emitter<CartState> emitter) async {
@@ -65,20 +65,22 @@ class CartBloc extends Bloc<CartEvent, CartState> {
         .collection("cart")
         .doc()
         .set({
-      "name": "yes",
-      "price": "10",
+      "name": product.productName,
+      "price": product.currentPrice,
+      "category": product.categoryName,
+      "image":product.productImageUrl
     });
     emitter(const CartItemAddedSuccessfulyState(
         successMessage: "Item has been added successfully"));
   }
 
-/* void _onRemoveProductFromCartEvent(RemoveProductFromCartEvent event, Emitter<CartState> emitter) {
+*//* void _onRemoveProductFromCartEvent(RemoveProductFromCartEvent event, Emitter<CartState> emitter) {
     // Change the state to LoadingState
     demoCart.products.removeAt(event.itemIndex);
     emitter(const CartItemRemovedSuccessfulyState(successMessage: "Item has been removed"));
-  }*/
+  }*//*
 
-/*void _onClearCartContentEvent(ClearCartContentEvent event, Emitter<CartState> emitter) {
+*//*void _onClearCartContentEvent(ClearCartContentEvent event, Emitter<CartState> emitter) {
     // Change the state to LoadingState
     demoCart.products.clear();
     if(kDebugMode){
@@ -86,5 +88,5 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     }
     emitter(const CartContentRemovedSuccessfulyState(successMessage: "Items have been removed"));
 
-  }*/
-}
+  }*//*
+}*/

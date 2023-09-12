@@ -6,6 +6,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../bloc/cart/cart_bloc.dart';
 import '../bloc/product/product_bloc.dart';
 import '../models/product_model.dart';
+import '../utils/colors.dart';
 
 class ProductDislpayWidget extends StatefulWidget {
   const ProductDislpayWidget({super.key});
@@ -103,12 +104,12 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                     ),
                     BlocBuilder<CartBloc, CartState>(
                       builder: (context, state) {
-                       // if (state is CartLoaded) {
+                       if (state is CartLoaded) {
                           return IconButton(
                             onPressed: () {
                               context
                                   .read<CartBloc>()
-                                  .add(AddProductToCartEvent(product: product));
+                                  .add(CartProductAdded(product));
                             },
                             icon: Icon(
                               Icons.add_circle,
@@ -116,21 +117,21 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                               color: Colors.green,
                             ),
                           );
-                       /* } else {
+                        } else {
                           return const Center(
                             child: CircularProgressIndicator(),
-                          );*/
-                       // }
+                          );
+                       }
                       },
-                    )
-                    /*Text(
+                    ),
+                    Text(
                       '\$${product.oldPrice}',
                       style: TextStyle(
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                           decorationColor: kRedColor,
                           decorationThickness: 2),
-                    ),*/
+                    ),
                   ],
                 ),
               )

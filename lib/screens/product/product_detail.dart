@@ -11,6 +11,7 @@ import '../../utils/utils.dart';
 
 class ProductDetail extends StatelessWidget {
   final Product product;
+
   ProductDetail({super.key, required this.product});
 
   static const String routeName = '/product-Detail';
@@ -195,7 +196,7 @@ class ProductDetail extends StatelessWidget {
           builder: (context, state) {
             return ElevatedButton(
               onPressed: () {
-                context.read<CartBloc>().add(AddProductToCartEvent(product: product));
+                context.read<CartBloc>().add(CartProductAdded(product));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: kPrimaryColor,
@@ -214,6 +215,7 @@ class ProductDetail extends StatelessWidget {
 
 class _availableSize extends StatefulWidget {
   final Product product;
+
   const _availableSize({super.key, required this.product});
 
   @override

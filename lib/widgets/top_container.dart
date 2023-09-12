@@ -10,6 +10,7 @@ class TopContainer extends StatelessWidget {
   final String? title;
   final String searchBarTitle;
   bool? isSearch;
+
   TopContainer(
       {super.key,
       this.title,

@@ -29,6 +29,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController userName = TextEditingController();
   final TextEditingController userPass = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -132,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                           );
                         },
                       ),
-                      SizedBox(height: 20.0),
+                      /*            SizedBox(height: 20.0),
                       BlocConsumer<SignInBloc, SignInState>(
                         listener: (context, state) {
                           if (state.status == SignInStatus.error) {
@@ -161,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                             txtColor: Colors.white,
                           );
                         },
-                      ),
+                      ),*/
                       SizedBox(height: 20.0),
                       TextButton(
                         onPressed: () {

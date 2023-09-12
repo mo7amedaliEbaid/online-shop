@@ -8,6 +8,7 @@ import '../utils/colors.dart';
 class CartProductCard extends StatelessWidget {
   final Product product;
   final int quantity;
+
   const CartProductCard(
       {super.key, required this.product, required this.quantity});
 
@@ -76,9 +77,9 @@ class CartProductCard extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
-                         /*   context
+                               context
                                 .read<CartBloc>()
-                                .add(CartProductAdded(product));*/
+                                .add(CartProductAdded(product));
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
@@ -103,9 +104,9 @@ class CartProductCard extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            /*context
+                            context
                                 .read<CartBloc>()
-                                .add(CartProductRemove(product));*/
+                                .add(CartProductRemove(product));
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(

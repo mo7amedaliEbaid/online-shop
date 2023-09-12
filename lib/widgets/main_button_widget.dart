@@ -8,6 +8,7 @@ class Mainbutton extends StatelessWidget {
   final String? image;
   final Color? txtColor;
   final Color btnColor;
+
   const Mainbutton({
     Key? key,
     required this.onTap,

@@ -65,7 +65,7 @@ class AuthRepository extends BaseAuthRepository {
     return currentUser != null;
   }
 
-  Future<void> signInWithGoogle() async {
+/*  Future<void> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
@@ -81,7 +81,7 @@ class AuthRepository extends BaseAuthRepository {
     } catch (e) {
       throw Exception(e.toString());
     }
-  }
+  }*/
 
   @override
   // TODO: implement user

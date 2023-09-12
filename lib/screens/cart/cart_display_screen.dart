@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/configs/app.dart';
@@ -14,10 +13,10 @@ class CartDisplayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size=MediaQuery.sizeOf(context);
+    Size size = MediaQuery.sizeOf(context);
     App.init(context);
     return Container(
-      padding: Space.all(1,.5),
+      padding: Space.all(1, .5),
       child: Column(
         children: [
           TopContainer(
@@ -27,18 +26,19 @@ class CartDisplayScreen extends StatelessWidget {
           ),
           BlocBuilder<CartBloc, CartState>(
             builder: (context, state) {
-             // if (state is CartLoaded) {
-                return Container(
-                  padding: EdgeInsets.zero,
-                  height: size.height*.48,
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: 1,/*state.cart
+               if (state is CartLoaded) {
+              return Container(
+                padding: EdgeInsets.zero,
+                height: size.height * .48,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount:
+                  state.cart
                         .productQuantity(state.cart.products)
                         .keys
-                        .length,*/
-                    itemBuilder: (context, index) {
-                      return Container();/* CartProductCard(
+                        .length,
+                  itemBuilder: (context, index) {
+                    return CartProductCard(
                         product: state.cart
                             .productQuantity(state.cart.products)
                             .keys
@@ -47,52 +47,52 @@ class CartDisplayScreen extends StatelessWidget {
                             .productQuantity(state.cart.products)
                             .values
                             .elementAt(index),
-                      );*/
-                    },
-                  ),
-                );
-              /*} else {
+                      );
+                  },
+                ),
+              );
+              } else {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              }*/
+              }
             },
           ),
           SizedBox(
-            height: size.height*.05,
+            height: size.height * .05,
           ),
           BlocBuilder<CartBloc, CartState>(builder: (context, state) {
-            //if (state is CartLoaded) {
-              return Container(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                decoration:
-                    BoxDecoration(border: Border.all(color: kPrimaryColor)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Total : ',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                      ),
+            if (state is CartLoaded) {
+            return Container(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              decoration:
+                  BoxDecoration(border: Border.all(color: kPrimaryColor)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total : ',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                     ),
-                    Text(
-                      //state.cart.totalString,
-                      "",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                      ),
+                  ),
+                  Text(
+                    state.cart.totalString,
+
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                     ),
-                  ],
-                ),
-              );
-            /*} else {
+                  ),
+                ],
+              ),
+            );
+            } else {
               return const Center(
                 child: CircularProgressIndicator(),
-              );*/
-          //  }
+              );
+            }
           }),
           SizedBox(
             height: 20,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../widgets/product_display_list_view.dart';

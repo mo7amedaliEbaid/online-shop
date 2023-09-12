@@ -7,6 +7,7 @@ class Product extends Equatable {
   final String currentPrice;
   final String productSize;
   final String categoryName;
+  final String oldPrice;
 
   Product({
     required this.productName,
@@ -14,6 +15,7 @@ class Product extends Equatable {
     required this.currentPrice,
     required this.productSize,
     required this.categoryName,
+    required this.oldPrice,
   });
 
   set productSize(String str) {
@@ -27,6 +29,7 @@ class Product extends Equatable {
       currentPrice: snap['price'],
       productSize: snap['productSize'],
       categoryName: snap['category'],
+      oldPrice: snap['oldprice'],
     );
     return product;
   }
