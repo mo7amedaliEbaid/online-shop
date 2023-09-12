@@ -110,16 +110,16 @@ class CartDisplayScreen extends StatelessWidget {
                                 backgroundColor: kPrimaryColor,
                               ),
                               onPressed: () async {
-                               /* Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => RegisterScreen()));*/
-                                 await PaymentCubit.get(context).getFirstToken(
+                                await PaymentCubit.get(context).getFirstToken(
                                   state.cart.totalString.toString(),
                                   userstate.user.fullName,
                                   userstate.user.fullName,
                                   userstate.user.email,
-                                 "01016381636"
-                                 // userstate.user.zipCode,
+                                  userstate.user.phoneNumber,
                                 );
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => ToggleScreen()));
+
                               },
                               child: Text("Chekout"),
                             );

@@ -8,7 +8,7 @@ class User extends Equatable {
   final String address;
   final String city;
   final String country;
-  final String zipCode;
+  final String phoneNumber;
 
   User({
     this.id,
@@ -17,7 +17,7 @@ class User extends Equatable {
     this.address = '',
     this.city = '',
     this.country = '',
-    this.zipCode = '',
+    this.phoneNumber = '',
   });
 
   User copyWith({
@@ -27,7 +27,7 @@ class User extends Equatable {
     String? address,
     String? city,
     String? country,
-    String? zipCode,
+    String? phoneNumber,
   }) {
     return User(
       id: id ?? this.id,
@@ -36,7 +36,7 @@ class User extends Equatable {
       address: address ?? this.address,
       city: city ?? this.city,
       country: country ?? this.country,
-      zipCode: zipCode ?? this.zipCode,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
     );
   }
 
@@ -48,7 +48,7 @@ class User extends Equatable {
       address: snap['address'],
       city: snap['city'],
       country: snap['country'],
-      zipCode: snap['zipCode'],
+      phoneNumber: snap['phoneNumber'],
     );
   }
 
@@ -59,11 +59,11 @@ class User extends Equatable {
       'address': address,
       'city': city,
       'country': country,
-      'zipCode': zipCode,
+      'zipCode': phoneNumber,
     };
   }
 
   @override
   List<Object?> get props =>
-      [id, fullName, email, address, city, country, zipCode];
+      [id, fullName, email, address, city, country, phoneNumber];
 }

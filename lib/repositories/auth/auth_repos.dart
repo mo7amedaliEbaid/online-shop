@@ -53,7 +53,7 @@ class AuthRepository extends BaseAuthRepository {
         'fullName': user.fullName,
         'city': user.city,
         'country': user.country,
-        'zipCode': user.zipCode,
+        'zipCode': user.phoneNumber,
         'email': user.email,
         'address': user.address,
       });

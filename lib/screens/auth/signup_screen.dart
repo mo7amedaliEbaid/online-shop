@@ -120,7 +120,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           address: userAdress.text,
                           city: userCity.text,
                           country: userCountry.text,
-                          zipCode: userZipcode.text,
+                          phoneNumber: userZipcode.text,
                         );
                         state.status == SignUpStatus.submitting
                             ? null
