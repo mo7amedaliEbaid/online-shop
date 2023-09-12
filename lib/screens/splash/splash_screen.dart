@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
         }
 
         if (state.status == AuthStatus.authenticated) {
-          Timer(Duration(seconds: 5), () => Navigator.pushNamed(context, '/'));
+          Timer(Duration(seconds: 2), () => Navigator.pushNamed(context, '/'));
         }
       },
       child: Scaffold(
