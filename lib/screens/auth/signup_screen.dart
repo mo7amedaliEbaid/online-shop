@@ -89,7 +89,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 textFieldWidget(
                   controller: userZipcode,
                   icon: FontAwesomeIcons.user,
-                  hintTxt: 'ZipCode',
+                  hintTxt: 'Phone Number',
                 ),
                 textFieldWidget(
                   controller: userPass,

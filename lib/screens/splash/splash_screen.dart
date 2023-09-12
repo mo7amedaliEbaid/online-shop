@@ -21,10 +21,9 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
-      listenWhen: (previous, current) => previous.user != current.user,
       listener: (context, state) {
         if (state.status == AuthStatus.unauthenticated) {
-          Timer(Duration(seconds: 5),
+          Timer(Duration(seconds: 2),
               () => Navigator.pushNamed(context, '/intro'));
         }
 

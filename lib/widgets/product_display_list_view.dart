@@ -8,6 +8,7 @@ import '../bloc/product/product_bloc.dart';
 import '../models/product_model.dart';
 import '../utils/colors.dart';
 
+
 class ProductDislpayWidget extends StatefulWidget {
   const ProductDislpayWidget({super.key});
 
@@ -82,7 +83,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.only(left: 8.0, right: 8.0, top: 10.0),
+                const EdgeInsets.only(left: 8.0, right: 8.0, top: 10.0),
                 child: Text(
                   product.productName,
                   maxLines: 1,
@@ -104,7 +105,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                     ),
                     BlocBuilder<CartBloc, CartState>(
                       builder: (context, state) {
-                       if (state is CartLoaded) {
+                        if (state is CartLoaded) {
                           return IconButton(
                             onPressed: () {
                               context
@@ -121,7 +122,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                           return const Center(
                             child: CircularProgressIndicator(),
                           );
-                       }
+                        }
                       },
                     ),
                     Text(
@@ -140,7 +141,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
         ),
         SizedBox(
           height:
-              lastItem == true ? MediaQuery.of(context).size.height * 0.5 : 0,
+          lastItem == true ? MediaQuery.of(context).size.height * 0.5 : 0,
         )
       ],
     );

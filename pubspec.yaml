@@ -26,6 +26,9 @@ dependencies:
   flutter_staggered_grid_view:
   font_awesome_flutter:
   google_sign_in:
+  dio:
+
+  webviewx: ^0.2.2
 
 dependency_overrides:
   firebase_core_platform_interface:

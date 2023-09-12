@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/repositories/auth/auth_repos.dart';
 import 'package:online_shop/repositories/category/category_repos.dart';
+import 'package:online_shop/repositories/network/dio.dart';
 import 'package:online_shop/repositories/product/product_repos.dart';
 import 'package:online_shop/repositories/user/user_repos.dart';
 import 'package:online_shop/screens/splash/splash_screen.dart';
@@ -23,6 +24,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await DioHelperPayment.init();
   runApp(const MyApp());
 }
 
@@ -52,7 +54,7 @@ class MyApp extends StatelessWidget {
             )..add(InitializeAuthEvent()),
           ),
           BlocProvider(
-            create: (context) => CartBloc(),
+              create: (context) => CartBloc()..add(CartStarted())
           ),
           BlocProvider(
             create: (context) => CategoryBloc(categoryRepos: CategoryRepos())
