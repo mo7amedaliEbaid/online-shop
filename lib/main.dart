@@ -15,7 +15,7 @@ import 'bloc/cart/cart_bloc.dart';
 import 'bloc/category/category_bloc.dart';
 import 'bloc/product/product_bloc.dart';
 import 'bloc/user/user_bloc.dart';
-import 'config/app_router.dart';
+import 'configs/app_router.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
             )..add(InitializeAuthEvent()),
           ),
           BlocProvider(
-            create: (context) => CartBloc()..add(CartStarted()),
+            create: (context) => CartBloc(),
           ),
           BlocProvider(
             create: (context) => CategoryBloc(categoryRepos: CategoryRepos())

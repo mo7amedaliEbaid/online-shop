@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/configs/app.dart';
+import 'package:online_shop/configs/configs.dart';
 
 import '../../bloc/cart/cart_bloc.dart';
 import '../../utils/colors.dart';
@@ -13,8 +15,9 @@ class CartDisplayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size=MediaQuery.sizeOf(context);
+    App.init(context);
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      padding: Space.all(1,.5),
       child: Column(
         children: [
           TopContainer(
@@ -24,18 +27,18 @@ class CartDisplayScreen extends StatelessWidget {
           ),
           BlocBuilder<CartBloc, CartState>(
             builder: (context, state) {
-              if (state is CartLoaded) {
+             // if (state is CartLoaded) {
                 return Container(
                   padding: EdgeInsets.zero,
                   height: size.height*.48,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    itemCount: state.cart
+                    itemCount: 1,/*state.cart
                         .productQuantity(state.cart.products)
                         .keys
-                        .length,
+                        .length,*/
                     itemBuilder: (context, index) {
-                      return CartProductCard(
+                      return Container();/* CartProductCard(
                         product: state.cart
                             .productQuantity(state.cart.products)
                             .keys
@@ -44,22 +47,22 @@ class CartDisplayScreen extends StatelessWidget {
                             .productQuantity(state.cart.products)
                             .values
                             .elementAt(index),
-                      );
+                      );*/
                     },
                   ),
                 );
-              } else {
+              /*} else {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              }
+              }*/
             },
           ),
           SizedBox(
             height: size.height*.05,
           ),
           BlocBuilder<CartBloc, CartState>(builder: (context, state) {
-            if (state is CartLoaded) {
+            //if (state is CartLoaded) {
               return Container(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration:
@@ -75,7 +78,8 @@ class CartDisplayScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      state.cart.totalString,
+                      //state.cart.totalString,
+                      "",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
@@ -84,11 +88,11 @@ class CartDisplayScreen extends StatelessWidget {
                   ],
                 ),
               );
-            } else {
+            /*} else {
               return const Center(
                 child: CircularProgressIndicator(),
-              );
-            }
+              );*/
+          //  }
           }),
           SizedBox(
             height: 20,

@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:online_shop/models/product_model.dart';
 
 import '../../models/user_model.dart';
 

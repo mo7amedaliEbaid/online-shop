@@ -103,12 +103,12 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                     ),
                     BlocBuilder<CartBloc, CartState>(
                       builder: (context, state) {
-                        if (state is CartLoaded) {
+                       // if (state is CartLoaded) {
                           return IconButton(
                             onPressed: () {
                               context
                                   .read<CartBloc>()
-                                  .add(CartProductAdded(product));
+                                  .add(AddProductToCartEvent(product: product));
                             },
                             icon: Icon(
                               Icons.add_circle,
@@ -116,11 +116,11 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                               color: Colors.green,
                             ),
                           );
-                        } else {
+                       /* } else {
                           return const Center(
                             child: CircularProgressIndicator(),
-                          );
-                        }
+                          );*/
+                       // }
                       },
                     )
                     /*Text(

@@ -195,7 +195,7 @@ class ProductDetail extends StatelessWidget {
           builder: (context, state) {
             return ElevatedButton(
               onPressed: () {
-                context.read<CartBloc>().add(CartProductAdded(product));
+                context.read<CartBloc>().add(AddProductToCartEvent(product: product));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: kPrimaryColor,
