@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import '../bloc/cart/cart_bloc.dart';
-import '../bloc/product/product_bloc.dart';
 import '../models/product_model.dart';
+import '../modules/cart/cart_bloc/cart_bloc.dart';
+import '../modules/products/product_bloc/product_bloc.dart';
 import '../utils/colors.dart';
 
 

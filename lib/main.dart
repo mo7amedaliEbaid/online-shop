@@ -4,20 +4,22 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:online_shop/repositories/auth/auth_repos.dart';
-import 'package:online_shop/repositories/category/category_repos.dart';
-import 'package:online_shop/repositories/network/dio.dart';
-import 'package:online_shop/repositories/product/product_repos.dart';
-import 'package:online_shop/repositories/user/user_repos.dart';
-import 'package:online_shop/screens/splash/splash_screen.dart';
 
-import 'bloc/auth/auth_bloc.dart';
-import 'bloc/cart/cart_bloc.dart';
-import 'bloc/category/category_bloc.dart';
-import 'bloc/product/product_bloc.dart';
-import 'bloc/user/user_bloc.dart';
+import 'package:online_shop/dio.dart';
+
+
 import 'configs/app_router.dart';
 import 'firebase_options.dart';
+import 'modules/auth/auth_bloc/auth_bloc.dart';
+import 'modules/auth/auth_repos/auth_repos.dart';
+import 'modules/branches/branches_bloc/category_bloc.dart';
+import 'modules/branches/branches_repos/category_repos.dart';
+import 'modules/cart/cart_bloc/cart_bloc.dart';
+import 'modules/products/product_bloc/product_bloc.dart';
+import 'modules/products/product_repos/product_repos.dart';
+import 'modules/splash/splash_screen.dart';
+import 'modules/user/user_bloc/user_bloc.dart';
+import 'modules/user/user_repos/user_repos.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
