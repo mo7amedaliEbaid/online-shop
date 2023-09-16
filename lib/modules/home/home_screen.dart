@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               children: [
                 ProductDisplayScreen(),
-                CategoryDisplayScreen(),
+                BranchDisplayScreen(),
                 CartDisplayScreen(),
                 ProfileScreen(),
               ],

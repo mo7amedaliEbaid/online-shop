@@ -14,9 +14,14 @@ class ToggleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.brown,
-          statusBarIconBrightness: Brightness.light,
+        leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.arrow_back_ios,color: Colors.white,size: 30,),
+          ),
         ),
         backgroundColor: Colors.black,
         title: const Text('Payment'),
@@ -81,7 +86,7 @@ class ToggleScreen extends StatelessWidget {
                         height: 7,
                       ),
                       Text(
-                        'Payment With Card',
+                        'Payment With Ref Code',
                         style: TextStyle(
                             fontSize: 16,
                           fontWeight: FontWeight.bold,

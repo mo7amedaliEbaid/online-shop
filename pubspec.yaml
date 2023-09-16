@@ -15,11 +15,13 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   bloc:
+  google_maps_flutter:
   cached_network_image:
   cloud_firestore:
   equatable:
   firebase_auth:
   firebase_core:
+
 #  firebase_messaging:
   flutter_bloc:
 #  flutter_local_notifications:

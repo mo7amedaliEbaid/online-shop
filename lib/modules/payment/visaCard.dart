@@ -24,10 +24,6 @@ class _VisaCardScreenState extends State<VisaCardScreen> {
 
       return  Scaffold(
         appBar: AppBar(
-          systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.green,
-            statusBarBrightness: Brightness.light,
-          ),
           backgroundColor: Colors.blue,
           actions: [
             InkWell(

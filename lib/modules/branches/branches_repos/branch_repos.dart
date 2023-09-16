@@ -1,23 +1,23 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../../models/category_model.dart';
-import 'base_category_repos.dart';
+import '../../../models/branch_model.dart';
+import 'base_branch_repos.dart';
 
 
-class CategoryRepos extends BaseCategoryRepository {
+class BranchRepos extends BaseBranchRepository {
   final FirebaseFirestore _firebaseFirestore;
 
-  CategoryRepos({FirebaseFirestore? firebaseFirestore})
+  BranchRepos({FirebaseFirestore? firebaseFirestore})
       : _firebaseFirestore = firebaseFirestore ?? FirebaseFirestore.instance;
 
   @override
-  Stream<List<Category>> getAllCategories() {
+  Stream<List<Branch>> getAllBranches() {
     return _firebaseFirestore
-        .collection('categories')
+        .collection('branches')
         .snapshots()
         .map((snapshot) {
       return snapshot.docs.map((doc) {
-        return Category.fromSnapShot(doc);
+        return Branch.fromSnapShot(doc);
       }).toList();
     });
   }

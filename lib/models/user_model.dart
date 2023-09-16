@@ -59,7 +59,7 @@ class User extends Equatable {
       'address': address,
       'city': city,
       'country': country,
-      'zipCode': phoneNumber,
+      'phoneNumber': phoneNumber,
     };
   }
 

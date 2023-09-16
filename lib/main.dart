@@ -12,8 +12,8 @@ import 'configs/app_router.dart';
 import 'firebase_options.dart';
 import 'modules/auth/auth_bloc/auth_bloc.dart';
 import 'modules/auth/auth_repos/auth_repos.dart';
-import 'modules/branches/branches_bloc/category_bloc.dart';
-import 'modules/branches/branches_repos/category_repos.dart';
+import 'modules/branches/branches_bloc/branch_bloc.dart';
+import 'modules/branches/branches_repos/branch_repos.dart';
 import 'modules/cart/cart_bloc/cart_bloc.dart';
 import 'modules/products/product_bloc/product_bloc.dart';
 import 'modules/products/product_repos/product_repos.dart';
@@ -59,8 +59,8 @@ class MyApp extends StatelessWidget {
               create: (context) => CartBloc()..add(CartStarted())
           ),
           BlocProvider(
-            create: (context) => CategoryBloc(categoryRepos: CategoryRepos())
-              ..add(LoadCategories()),
+            create: (context) => BranchBloc(branchRepos: BranchRepos())
+              ..add(LoadBranches()),
           ),
           BlocProvider(
             create: (context) =>

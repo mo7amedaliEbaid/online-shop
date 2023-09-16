@@ -2,43 +2,43 @@ import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/modules/branches/branches_screens/map_screen.dart';
+import 'package:online_shop/widgets/navigation.dart';
 
 import '../../../widgets/top_container.dart';
-import '../branches_bloc/category_bloc.dart';
+import '../branches_bloc/branch_bloc.dart';
 
-
-
-class CategoryDisplayScreen extends StatefulWidget {
-  const CategoryDisplayScreen({super.key});
+class BranchDisplayScreen extends StatefulWidget {
+  const BranchDisplayScreen({super.key});
 
   @override
-  State<CategoryDisplayScreen> createState() => _CategoryDisplayScreenState();
+  State<BranchDisplayScreen> createState() => _BranchDisplayScreenState();
 }
 
-class _CategoryDisplayScreenState extends State<CategoryDisplayScreen> {
+class _BranchDisplayScreenState extends State<BranchDisplayScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: Column(
         children: [
-          TopContainer(title: 'Category', searchBarTitle: "search Category"),
+          TopContainer(title: 'Branch', searchBarTitle: "search Branch"),
           SizedBox(
             height: 20,
           ),
-          BlocBuilder<CategoryBloc, CategoryState>(
+          BlocBuilder<BranchBloc, BranchState>(
             builder: (context, state) {
-              if (state is CategoryLoading) {
+              if (state is BranchLoading) {
                 return Center(
                   child: CircularProgressIndicator(),
                 );
               }
-              if (state is CategoryLoaded) {
+              if (state is BranchLoaded) {
                 return ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
-                  itemCount: state.categories.length,
+                  itemCount: state.branches.length,
                   itemBuilder: (context, index) {
                     return Container(
                       width: MediaQuery.of(context).size.width,
@@ -49,7 +49,7 @@ class _CategoryDisplayScreenState extends State<CategoryDisplayScreen> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: CachedNetworkImageProvider(
-                                  state.categories[index].imageUrl),
+                                  state.branches[index].imageUrl),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(20.0)),
                       child: Stack(
@@ -61,24 +61,42 @@ class _CategoryDisplayScreenState extends State<CategoryDisplayScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  state.categories[index].categoryName,
+                                  state.branches[index].branchName,
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
-                                  backgroundColor: Colors.white
-                                  ),
+                                      backgroundColor: Colors.white),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Text(
-                                  "${state.categories[index].productCount} Products",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                  backgroundColor: Colors.white
+                                InkWell(
+                                  onTap: () {
+                                    NavigateTo(
+                                        context,
+                                        MapScreen(
+                                            latitude: double.parse(
+                                                state.branches[index].lat),
+                                            longitude: double.parse(state
+                                                .branches[index].long)));
+                                  },
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.map,
+                                        color: Colors.white,
+                                      ),
+                                      Text(
+                                        "Go To Map",
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            backgroundColor: Colors.white),
+                                      ),
+                                    ],
                                   ),
                                 )
                               ],

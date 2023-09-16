@@ -117,8 +117,7 @@ class CartDisplayScreen extends StatelessWidget {
                                   userstate.user.email,
                                   userstate.user.phoneNumber,
                                 );
-                               /* Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => ToggleScreen()));*/
+                                NavigateTo(context, ToggleScreen());
 
                               },
                               child: Text("Chekout"),
