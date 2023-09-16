@@ -24,7 +24,7 @@ class CartDisplayScreen extends StatelessWidget {
       child: BlocConsumer<PaymentCubit, PaymentsStates>(
         listener: (context, paymentstate) {
           if (paymentstate is PaymentReferenceCodeSuccessState) {
-            NavigateAndFinish(context, const ToggleScreen());
+            NavigateTo(context, const ToggleScreen());
           }
         },
         builder: (context, paymentstate) {
@@ -42,7 +42,7 @@ class CartDisplayScreen extends StatelessWidget {
                     if (state is CartLoaded) {
                       return Container(
                         padding: EdgeInsets.zero,
-                        height: 400,
+                        height: MediaQuery.sizeOf(context).height*.51,
                         child: ListView.builder(
                           shrinkWrap: true,
                           itemCount: state.cart
@@ -71,7 +71,7 @@ class CartDisplayScreen extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 BlocBuilder<CartBloc, CartState>(builder: (context, state) {
                   if (state is CartLoaded) {
@@ -101,6 +101,9 @@ class CartDisplayScreen extends StatelessWidget {
                               ),
                             ],
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         BlocBuilder<UserBloc, UserState>(
                           builder: (context, userstate) {
@@ -135,9 +138,7 @@ class CartDisplayScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                SizedBox(
-                  height: 80,
-                ),
+
               ],
             ),
           );

@@ -3,10 +3,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:online_shop/widgets/messenger.dart';
 
 import '../../../models/product_model.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/utils.dart';
+import '../../../widgets/indicator.dart';
 import '../../cart/cart_bloc/cart_bloc.dart';
 
 class ProductDetail extends StatelessWidget {
@@ -197,6 +199,7 @@ class ProductDetail extends StatelessWidget {
             return ElevatedButton(
               onPressed: () {
                 context.read<CartBloc>().add(CartProductAdded(product));
+                Message(context, "Product added to cart successfully");
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: kPrimaryColor,

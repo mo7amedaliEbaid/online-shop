@@ -61,7 +61,6 @@ class _VisaCardScreenState extends State<VisaCardScreen> {
           TextButton(
             onPressed: () {
               Navigator.pop(context);
-              NavigateAndFinish(context, CartDisplayScreen());
             },
             child: const Text("Yes"),
           ),

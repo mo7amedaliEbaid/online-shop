@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/widgets/messenger.dart';
 import '../models/product_model.dart';
 import '../modules/cart/cart_bloc/cart_bloc.dart';
 import '../utils/colors.dart';
@@ -8,6 +9,7 @@ import '../utils/colors.dart';
 class CartProductCard extends StatelessWidget {
   final Product product;
   final int quantity;
+
   const CartProductCard(
       {super.key, required this.product, required this.quantity});
 
@@ -79,6 +81,8 @@ class CartProductCard extends StatelessWidget {
                             context
                                 .read<CartBloc>()
                                 .add(CartProductAdded(product));
+                            Message(
+                                context, "Quantitiy increased successfully");
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
@@ -106,7 +110,10 @@ class CartProductCard extends StatelessWidget {
                             context
                                 .read<CartBloc>()
                                 .add(CartProductRemove(product));
+                            Message(
+                                context, "Quantitiy decreased successfully");
                           },
+
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 8),

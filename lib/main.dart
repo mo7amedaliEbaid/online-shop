@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/dio.dart';
 
 
-import 'configs/app_router.dart';
+import 'app_router.dart';
 import 'firebase_options.dart';
 import 'modules/auth/auth_bloc/auth_bloc.dart';
 import 'modules/auth/auth_repos/auth_repos.dart';

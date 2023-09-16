@@ -2,12 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:online_shop/widgets/messenger.dart';
 
 import '../models/product_model.dart';
 import '../modules/cart/cart_bloc/cart_bloc.dart';
 import '../modules/products/product_bloc/product_bloc.dart';
 import '../utils/colors.dart';
-
 
 class ProductDislpayWidget extends StatefulWidget {
   const ProductDislpayWidget({super.key});
@@ -83,7 +83,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
               ),
               Padding(
                 padding:
-                const EdgeInsets.only(left: 8.0, right: 8.0, top: 10.0),
+                    const EdgeInsets.only(left: 8.0, right: 8.0, top: 10.0),
                 child: Text(
                   product.productName,
                   maxLines: 1,
@@ -111,6 +111,8 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                               context
                                   .read<CartBloc>()
                                   .add(CartProductAdded(product));
+                              Message(context,
+                                  "Product added to cart successfully");
                             },
                             icon: Icon(
                               Icons.add_circle,
@@ -141,7 +143,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
         ),
         SizedBox(
           height:
-          lastItem == true ? MediaQuery.of(context).size.height * 0.5 : 0,
+              lastItem == true ? MediaQuery.of(context).size.height * 0.5 : 0,
         )
       ],
     );

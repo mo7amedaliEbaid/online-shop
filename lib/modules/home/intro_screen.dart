@@ -81,7 +81,7 @@ class IntroScreen extends StatelessWidget {
                       height: 40,
                     ),
                     Text(
-                      'Change The Quality Of Your \n Appearance with Our FASHION Shop',
+                      'Change The Quality Of Your \n Appearance with Our Online Shop',
                       style: kNormalStyle.copyWith(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
