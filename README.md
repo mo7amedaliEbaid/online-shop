@@ -57,15 +57,14 @@ secrets.dart is missing from this repo so you need to add the following consts
 <br/>
 
 ``
-final String GoogleMapsKey="xxxxxxx";
-final String PaymobAPIKey="xxxxxx";
-final String IntegrationIDCard="xxxxx";
-final String IntegrationIDKiosk="xxxxx";
+final String GoogleMapsKey="xxxxxxx";       
+final String PaymobAPIKey="xxxxxx";     
+final String IntegrationIDCard="xxxxx";     
+final String IntegrationIDKiosk="xxxxx";        
 ``
 <br/>
 
 and in AndroidManifest.xml add
-
 <br/>
 
 ``
