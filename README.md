@@ -51,6 +51,30 @@ By using firebase as a backend, I developed a flutter app for shoping online.
 
 <br/>
 
+### Attention
+
+secrets.dart is missing from this repo so you need to add the following consts
+<br/>
+
+``
+final String GoogleMapsKey="xxxxxxx";
+final String PaymobAPIKey="xxxxxx";
+final String IntegrationIDCard="xxxxx";
+final String IntegrationIDKiosk="xxxxx";
+``
+<br/>
+
+and in AndroidManifest.xml add
+
+<br/>
+
+``
+<meta-data android:name="com.google.android.geo.API_KEY"
+android:value="xxxxxxxxxxxx"/>
+``
+
+<br/>
+
 ### Demo Video
 <a href="https://youtu.be/N5Xv-QDSUWI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
 <br/>
