@@ -81,7 +81,7 @@ android:value="xxxxxxxxxxxx"/>
 
 <br/>
 
-Fore more screen shots [Here](https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots)
+For more screen shots [Here](https://github.com/mo7amedaliEbaid/online-shop/blob/88f2b2729c754b6ed54cd423c8fb9f57bd283b06/onlineshop_screenshots)
 
 <br/>
 
