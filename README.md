@@ -67,10 +67,11 @@ final String IntegrationIDKiosk="xxxxx";
 and in AndroidManifest.xml add
 <br/>
 
-``
+```
 <meta-data android:name="com.google.android.geo.API_KEY"
 android:value="xxxxxxxxxxxx"/>
-``
+
+```
 
 <br/>
 
