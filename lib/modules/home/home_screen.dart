@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../utils/colors.dart';
+import '../../core/colors.dart';
 
 import '../../modules/user/profil_screen.dart';
 import '../branches/branches_screens/category_display_screen.dart';

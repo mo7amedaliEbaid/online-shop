@@ -7,7 +7,7 @@ import 'package:online_shop/widgets/messenger.dart';
 import '../models/product_model.dart';
 import '../modules/cart/cart_bloc/cart_bloc.dart';
 import '../modules/products/product_bloc/product_bloc.dart';
-import '../utils/colors.dart';
+import '../core/colors.dart';
 
 class ProductDislpayWidget extends StatefulWidget {
   const ProductDislpayWidget({super.key});
@@ -22,7 +22,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
     return BlocBuilder<ProductBloc, ProductState>(
       builder: (context, state) {
         if (state is ProductLoading) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         } else if (state is ProductLoaded) {
@@ -44,7 +44,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
             },
           );
         } else {
-          return Center(
+          return const Center(
             child: Text("Error"),
           );
         }
@@ -101,7 +101,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                   children: [
                     Text(
                       '\$${product.currentPrice}',
-                      style: TextStyle(color: Colors.green),
+                      style: const TextStyle(color: Colors.green),
                     ),
                     BlocBuilder<CartBloc, CartState>(
                       builder: (context, state) {
@@ -114,7 +114,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                               Message(context,
                                   "Product added to cart successfully");
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.add_circle,
                               size: 20,
                               color: Colors.green,
@@ -129,7 +129,7 @@ class _ProductDislpayWidgetState extends State<ProductDislpayWidget> {
                     ),
                     Text(
                       '\$${product.oldPrice}',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                           decorationColor: kRedColor,

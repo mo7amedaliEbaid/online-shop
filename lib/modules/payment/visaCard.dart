@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:webviewx/webviewx.dart';
 
-import '../../utils/utils.dart';
+import '../../core/utils.dart';
 import '../../widgets/navigation.dart';
 import '../cart/cart_screens/cart_display_screen.dart';
 

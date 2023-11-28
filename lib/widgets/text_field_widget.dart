@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/utils.dart';
+import '../core/utils.dart';
 
 Widget textFieldWidget({
   required String hintTxt,
@@ -11,13 +11,13 @@ Widget textFieldWidget({
 }) {
   return Container(
     height: 60.0,
-    padding: EdgeInsets.symmetric(horizontal: 30.0),
-    margin: EdgeInsets.symmetric(
+    padding: const EdgeInsets.symmetric(horizontal: 30.0),
+    margin: const EdgeInsets.symmetric(
       horizontal: 20.0,
       vertical: 10.0,
     ),
     decoration: BoxDecoration(
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Color.fromRGBO(0, 0, 0, 0.24),
           offset: Offset(0, 1),

@@ -3,8 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../utils/colors.dart';
-import '../utils/utils.dart';
+import '../core/colors.dart';
+import '../core/utils.dart';
 
 class TopContainer extends StatelessWidget {
   final String? title;
@@ -61,7 +61,7 @@ class TopContainer extends StatelessWidget {
                       child: Container(
                         height: 8,
                         width: 8,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.green,
                         ),
@@ -84,7 +84,7 @@ class TopContainer extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         isSearch == true
@@ -97,7 +97,7 @@ class TopContainer extends StatelessWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     fillColor: kGreyColor,
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       FontAwesomeIcons.magnifyingGlass,
                       size: 15,
                     ),
@@ -110,7 +110,7 @@ class TopContainer extends StatelessWidget {
                 ),
               )
             : Container(),
-        SizedBox(
+        const SizedBox(
           height: 10,
         )
       ],

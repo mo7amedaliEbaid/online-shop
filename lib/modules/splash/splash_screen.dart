@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../utils/colors.dart';
+import '../../core/colors.dart';
 import '../auth/auth_bloc/auth_bloc.dart';
 
 class SplashScreen extends StatelessWidget {

@@ -5,11 +5,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:online_shop/dio.dart';
+import 'package:online_shop/core/dio.dart';
 
 
-import 'app_router.dart';
-import 'firebase_options.dart';
+import 'core/app_router.dart';
+import 'core/firebase_options.dart';
 import 'modules/auth/auth_bloc/auth_bloc.dart';
 import 'modules/auth/auth_repos/auth_repos.dart';
 import 'modules/branches/branches_bloc/branch_bloc.dart';
@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
             )..add(StartUserEvent()),
           ),
         ],
-        child: MaterialApp(
+        child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRouter.onGenerateRoute,
           initialRoute: SplashScreen.routeName,

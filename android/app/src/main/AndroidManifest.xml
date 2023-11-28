@@ -6,7 +6,8 @@
         android:label="online_shop"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-
+        <meta-data android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyCfXnfJAD4JnbM5JjF8zRD4HxW_0cc1MLU"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

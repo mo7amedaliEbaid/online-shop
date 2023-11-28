@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../core/colors.dart';
 List<Widget> buildIndicators() {
   List<Widget> list = [];
   for (int i = 0; i < 4; i++) {

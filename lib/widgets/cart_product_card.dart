@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/widgets/messenger.dart';
 import '../models/product_model.dart';
 import '../modules/cart/cart_bloc/cart_bloc.dart';
-import '../utils/colors.dart';
+import '../core/colors.dart';
 
 class CartProductCard extends StatelessWidget {
   final Product product;
@@ -16,7 +16,7 @@ class CartProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       //padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -26,7 +26,7 @@ class CartProductCard extends StatelessWidget {
               color: Colors.grey.shade100,
               spreadRadius: 1,
               blurRadius: 3,
-              offset: Offset(1, 1))
+              offset: const Offset(1, 1))
         ],
       ),
       height: 120,
@@ -55,19 +55,19 @@ class CartProductCard extends StatelessWidget {
                         product.productName,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                        style: const TextStyle(fontWeight: FontWeight.w700),
                       ),
                     ),
                     Text(
                       '\$${product.currentPrice}',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.green, fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
                 Text(
                   'Size : ${product.productSize}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     color: Colors.black54,
                   ),
@@ -88,7 +88,7 @@ class CartProductCard extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 8),
                             color: kGreyColor.withOpacity(0.5),
-                            child: Icon(
+                            child: const Icon(
                               Icons.add,
                               size: 16,
                             ),
@@ -118,7 +118,7 @@ class CartProductCard extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 8),
                             color: kGreyColor.withOpacity(0.5),
-                            child: Icon(
+                            child: const Icon(
                               Icons.remove,
                               size: 16,
                             ),

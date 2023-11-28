@@ -1,9 +1,8 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:online_shop/utils/utils.dart';
+import 'package:online_shop/core/utils.dart';
 
 class ImageListView extends StatefulWidget {
   final int starIndex;

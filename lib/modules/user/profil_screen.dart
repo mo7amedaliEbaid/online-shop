@@ -5,8 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:online_shop/modules/user/user_bloc/user_bloc.dart';
 
 
-import '../../utils/colors.dart';
-import '../../utils/utils.dart';
+import '../../core/colors.dart';
+import '../../core/utils.dart';
 import '../../widgets/main_button_widget.dart';
 import '../auth/auth_bloc/auth_bloc.dart';
 

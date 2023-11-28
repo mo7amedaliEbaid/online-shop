@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../models/custom_error_model.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/utils.dart';
+import '../../../core/colors.dart';
+import '../../../core/utils.dart';
 import '../../../widgets/main_button_widget.dart';
 import '../../../widgets/text_field_widget.dart';
 import '../auth_repos/auth_repos.dart';

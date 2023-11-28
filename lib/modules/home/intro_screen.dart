@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/colors.dart';
-import '../../utils/utils.dart';
+import '../../core/colors.dart';
+import '../../core/utils.dart';
 import '../../widgets/image_list_view.dart';
 
 class IntroScreen extends StatelessWidget {
